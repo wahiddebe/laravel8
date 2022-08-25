@@ -1,0 +1,395 @@
+:root {
+    --white: #FFFFFF;
+
+    --baseneutral100: #E9E9E9;
+    --baseneutral200: #CACACA;
+    --baseneutral300: #A9A9A9;
+    --baseneutral400: #626262;
+    --baseneutral500: #2C3131;
+
+    --primary100: #CCE2FF;
+    --primary500: #006EFF;
+
+
+}
+
+@import url("http://fonts.cdnfonts.com/css/sf-pro-display");
+
+
+* {
+    font-family: 'SF Pro Display',
+        sans-serif;
+    letter-spacing: -0.02em;
+    color: var(--baseneutral500);
+
+}
+
+/*font*/
+.lh-xl {
+    line-height: 1.75rem;
+}
+
+.display-6 {
+    font-size: 5.25rem;
+    line-height: 5.25rem;
+}
+
+.fs-36 {
+    font-size: 36px !important;
+    line-height: 48px !important;
+}
+
+.fs-18 {
+    font-size: 18px !important;
+    line-height: 28px !important;
+}
+
+.fs-12 {
+    font-size: 12px !important;
+    line-height: 18px !important;
+}
+
+.fs-14 {
+    font-size: 14px !important;
+    line-height: 20px !important;
+}
+
+.fw-semibold {
+    font-weight: 600;
+}
+
+.fw-medium {
+    font-weight: 500;
+}
+
+.text-bn300 {
+    color: var(--baseneutral300);
+}
+
+.text-bn400 {
+    color: var(--baseneutral400);
+}
+
+.text-bn500 {
+    color: var(--baseneutral500);
+}
+
+.text-primary {
+    color: var(--primary500) !important;
+}
+
+.text-dark {
+    color: var(--baseneutral500) !important;
+}
+
+.bg-light {
+    background-color: var(--white) !important;
+}
+
+.bg-bn100 {
+    background-color: var(--baseneutral100) !important;
+}
+
+.bg-primary100 {
+    background-color: var(--primary100) !important;
+}
+
+.bg-fafafa {
+    background-color: #fafafa;
+}
+
+.bg-blur-40 {
+    background: rgba(255, 255, 255, 0.40);
+    backdrop-filter: blur(24px);
+}
+
+.bg-blur-56 {
+    background: rgba(255, 255, 255, 0.56);
+    backdrop-filter: blur(24px);
+}
+
+.btn {
+    font-size: 1.125rem !important;
+}
+
+.btn-green {
+    background-color: #4DA834 !important;
+    color: var(--white) !important;
+}
+
+.btn-dark {
+    background-color: var(--baseneutral500);
+}
+
+.btn-bn300 {
+    background-color: var(--baseneutral300);
+    color: white !important;
+}
+
+.btn-primary {
+    background-color: var(--primary500) !important;
+}
+
+.btn-outline-primary {
+    color: var(--primary500) !important;
+    border-color: var(--primary500) !important;
+}
+
+.btn-outline-primary:hover {
+    color: var(--white) !important;
+    border-color: var(--primary500) !important;
+    background-color: var(--primary500) !important;
+}
+
+.btn-close {
+    background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiByeD0iMjAiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0xMy4wMDEgMTNMMjcgMjYuOTk5MSIgc3Ryb2tlPSIjMkMzMTMxIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjxwYXRoIGQ9Ik0xMyAyNi45OTkxTDI2Ljk5OSAxMyIgc3Ryb2tlPSIjMkMzMTMxIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo=') center/2em auto no-repeat !important;
+}
+
+.radius-4 {
+    border-radius: 0.5rem;
+}
+
+.p-6 {
+    padding: 4.5rem;
+}
+
+.px-6 {
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+}
+
+.pe-6 {
+    padding-right: 4.5rem;
+}
+
+
+.ps-6 {
+    padding-left: 4.5rem;
+}
+
+.form-control {
+    color: var(--baseneutral500) !important;
+
+}
+
+.form-control::placeholder {
+    color: var(--baseneutral300) !important;
+}
+
+.form-select {
+    background-size: 24px 24px !important;
+    background-position: right center !important;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE5LjkyMDEgOC45NTAyTDEzLjQwMDEgMTUuNDcwMkMxMi42MzAxIDE2LjI0MDIgMTEuMzcwMSAxNi4yNDAyIDEwLjYwMDEgMTUuNDcwMkw0LjA4MDA4IDguOTUwMiIgc3Ryb2tlPSIjNjI2MjYyIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg==') !important;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background-size: 24px 24px !important;
+    background-position: right center !important;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE5LjkyMDEgOC45NTAyTDEzLjQwMDEgMTUuNDcwMkMxMi42MzAxIDE2LjI0MDIgMTEuMzcwMSAxNi4yNDAyIDEwLjYwMDEgMTUuNDcwMkw0LjA4MDA4IDguOTUwMiIgc3Ryb2tlPSIjNjI2MjYyIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg==') !important;
+
+}
+
+select:invalid {
+    color: var(--baseneutral300) !important;
+}
+
+.border-bn100 {
+    border-color: var(--baseneutral100) !important;
+}
+
+.border-bn500 {
+    border-color: var(--baseneutral500) !important;
+}
+
+nav .nav-link {
+    color: var(--baseneutral300) !important;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+    margin-right: 2.5rem;
+}
+
+
+
+
+.nav-link.active {
+    color: var(--baseneutral500) !important;
+}
+
+.divider-nav {
+    height: 2rem;
+    width: 2px;
+    margin-right: 40px;
+    background-color: var(--baseneutral200);
+}
+
+/* footer */
+footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #FAFAFA;
+
+}
+
+
+footer .divider-nav {
+    height: 1.5px !important;
+    width: 100% !important;
+    background-color: var(--baseneutral300);
+}
+
+footer .nav-link {
+    color: var(--baseneutral500) !important;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+}
+
+/* home */
+/* hero section */
+.hero-section {
+    padding-top: 7.5rem;
+    padding-bottom: 6.25rem;
+}
+
+/* lingkup-section */
+.lingkup-section {
+    background-image: url('/images/Akomodasi (1).png');
+    background-size: auto 36rem;
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+/* nilai-section */
+.nilai-section .nilai-img {
+    margin-top: calc(-50% - 6rem);
+}
+
+@media (max-width: 1200px) {
+    .nilai-section .nilai-img {
+        margin-top: 0 !important;
+    }
+
+}
+
+/* berita-terbaru-section */
+
+.bg-berita {
+    max-width: 28rem;
+    left: 0;
+    bottom: -3rem;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.divider-berita {
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+    margin: 0 12px 0 12px;
+
+    background: var(--baseneutral500);
+}
+
+.deskripsi-berita {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+.title-berita {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* artikel-terbaru-section */
+.bg-artikel {
+    max-width: 28rem;
+    right: 0;
+    top: -3rem;
+    z-index: -1;
+
+
+
+}
+
+.artikel-heading {
+    height: 384px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.divider-artikel {
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+    margin: 0 12px 0 12px;
+
+    background: var(--baseneutral500);
+}
+
+.deskripsi-artikel {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* yogasmara-shop */
+
+.shop-heading {
+    width: 100%;
+    background-image: url('/images/penerimaan\ 3.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/* Tentang Kami */
+
+/* visimisi */
+
+.bg-visi-misi {
+    background: -webkit-linear-gradient(left, #FAFAFA 25%, var(--white) 75%);
+
+}
+
+
+/* layanan */
+.accordion-button::after {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDIyQzE3LjUyMjggMjIgMjIgMTcuNTIyOCAyMiAxMkMyMiA2LjQ3NzE1IDE3LjUyMjggMiAxMiAyQzYuNDc3MTUgMiAyIDYuNDc3MTUgMiAxMkMyIDE3LjUyMjggNi40NzcxNSAyMiAxMiAyMloiIHN0cm9rZT0iIzI5MkQzMiIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjxwYXRoIGQ9Ik0xMC43NCAxNS41M0wxNC4yNiAxMkwxMC43NCA4LjQ2OTk3IiBzdHJva2U9IiMyOTJEMzIiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg==') !important;
+}
+
+.accordion-button:not(.collapsed)::after {
+    transform: rotate(90deg) !important;
+}
+
+/* shop */
+
+.divider-modal {
+    height: 1.5px !important;
+    width: 100% !important;
+    background-color: var(--baseneutral100);
+}
+
+
+/* kuisioner */
+.box-kuis {
+    background: #FFFFFF;
+    /* Medium */
+
+    box-shadow: 0px 12px 30px rgba(17, 17, 17, 0.08);
+
+}
