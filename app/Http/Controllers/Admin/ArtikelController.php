@@ -51,6 +51,8 @@ class ArtikelController extends Controller
         $data->desc = $request->desc;
         $data->kategoris_id = $request->kategoris_id;
         $data->penulis = $request->penulis;
+        $data->created_at = $request->created_at;
+
         $data->status = 1;
         if ($request->file('gambar')) {
             // Storage::delete($data->gambar);
@@ -101,6 +103,8 @@ class ArtikelController extends Controller
         $data->desc = $request->desc;
         $data->kategoris_id = $request->kategoris_id;
         $data->penulis = $request->penulis;
+        $data->created_at = $request->created_at;
+
         $data->status = 1;
         if ($request->file('gambar')) {
             Storage::delete($data->gambar);

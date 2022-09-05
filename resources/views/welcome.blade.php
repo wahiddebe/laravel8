@@ -34,7 +34,7 @@
         <div class="row m-0 mt-3">
             <div class="col-md-6 position-relative pe-md-5 ps-md-0 px-0
               ">
-                <img src="{{ asset('storage/'.$lingkup->gambar) }}" class="img-fluid " alt="">
+                <img src="{{ asset('storage/'.$lingkup->gambar) }}" class="img-fluid" alt="">
                 <img src="{{ asset('/images/Akomodasi.png') }}"
                     class="img-fluid position-absolute top-0 start-0 translate-middle" alt="">
             </div>
@@ -48,7 +48,7 @@
                     @if ($item != "")
 
                     <div class="lingkup-list-item pb-3 d-flex align-items-center">
-                        <img class="pe-3"
+                        <img class="pe-3 "
                             src="{{ ($no == 1) ? asset('images/green.svg') : (($no==2) ? asset('images/yellow.svg') : asset('images/red.svg') ) }}"
                             alt="">
                         <p class="m-0 fs-18 fw-medium">{{ $item }}</p>
@@ -93,7 +93,7 @@
                 </div>
             </div>
             <div class="col-md-6 ps-md-5 pe-md-0 ">
-                <img src="{{ asset('storage/'.$nilai->gambar1) }}" class="img-fluid nilai-img" alt="">
+                <img src="{{ asset('storage/'.$nilai->gambar1) }}" class="img-fluid nilai-img mt-5" alt="">
                 <img src="{{ asset('storage/'.$nilai->gambar2) }}" class="img-fluid mt-4" alt="">
             </div>
         </div>

@@ -100,7 +100,7 @@
     utter.lang='id-ID';
     utter.text='Judul Berita ' +title+'. Isi berita     '+desc;
     utter.volume = 1;
-    utter.rate = 0.6;
+    utter.rate = 0.8;
 
     // event after text has been spoken
 

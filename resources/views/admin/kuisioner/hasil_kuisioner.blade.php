@@ -46,8 +46,9 @@
                                             <th>Kuisioner</th>
                                             <th>Total Score</th>
                                             <th>Interpretasi</th>
-                                            <th>Hasil Setiap Pertanyaan</th>
                                             <th>Tanggal Pengisian</th>
+                                            <th>Hasil Setiap Pertanyaan</th>
+                                            <th></th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -67,8 +68,53 @@
                                                 <a class="btn btn-primary"
                                                     href="/admin/kuisioner/hasil/kuisioner/show/{{ $item->id }}">Lihat</a>
                                             </td>
+                                            <td>
+                                                <div class="btn-group" role="group" aria-label="Basic example">
+                                                    <button type="button" href="#" data-toggle="modal"
+                                                        data-target="#delete{{ $item->id }}"
+                                                        class="btn btn-danger">Delete</button>
+                                                    <a href="" type="button" class="btn btn-success">Download</a>
+                                                </div>
+                                            </td>
                                         </tr>
+                                        <div class="modal fade" id="delete{{ $item->id }}" tabindex="-1" role="dialog"
+                                            aria-labelledby="delete{{ $item->id }}Label" aria-hidden="true">
+                                            <div class="modal-dialog modal-xl" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="delete{{ $item->id }}Label">
+                                                            Hapus Data
+                                                        </h5>
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <form action="{{ route('admin.hasil.kuisioner.destroy') }}"
+                                                            method="POST" enctype="multipart/form-data">
+                                                            @csrf
+                                                            <div class="card-body">
+                                                                <div class="form-group">
+                                                                    <label>Apakah anda ingin menghapus data
+                                                                        ini?</label>
+                                                                    <input type="text" name="id" value="{{ $item->id }}"
+                                                                        hidden>
+                                                                </div>
+                                                            </div>
+
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-dismiss="modal">Close</button>
+                                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                                    </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
                                         @endforeach
+                                        {{-- modal delete --}}
 
 
                                     </tbody>

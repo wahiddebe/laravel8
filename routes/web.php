@@ -114,6 +114,7 @@ Route::put('/admin/kuisioner/hasil/kategori/update', [AdminKuisionerController::
 
 Route::get('/admin/kuisioner/hasil/kuisioner/', [AdminKuisionerController::class, 'hasil_kuisioner_index'])->name('admin.hasil.kuisioner');
 Route::get('/admin/kuisioner/hasil/kuisioner/show/{id}', [AdminKuisionerController::class, 'hasil_kuisioner_per_index'])->name('admin.hasil.kuisioner.per');
+Route::post('/admin/kuisioner/hasil/kusioner/destroy', [AdminKuisionerController::class, 'hasil_kuisioner_destroy'])->name('admin.hasil.kuisioner.destroy');
 
 
 Route::get('/admin/setting/', [AdminSettingController::class, 'index'])->name('admin.setting');

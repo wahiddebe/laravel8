@@ -335,4 +335,14 @@ class KuisionerController extends Controller
             return redirect('admin/kuisioner/hasil/kategori')->with('message', 'Data gagal dihapus');
         }
     }
+    public function hasil_kuisioner_destroy(Request $request)
+    {
+        # code...
+        $data = Hasil_Kuisioner::find($request->id);
+        if ($data->delete()) {
+            return redirect('/admin/kuisioner/hasil/kuisioner/')->with('message', 'Data berhasil dihapus');
+        } else {
+            return redirect('/admin/kuisioner/hasil/kuisioner/')->with('message', 'Data gagal dihapus');
+        }
+    }
 }

@@ -14,13 +14,13 @@
                     {!! $data->desc_hero !!}
                 </p>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                    <button type="button" class="btn btn-primary px-5 btn-lg py-3">Lihat Lebih Lanjut</button>
+                    <a href="#visi-misi" type="button" class="btn btn-primary px-5 btn-lg py-3">Lihat Lebih Lanjut</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div class="visi-misi bg-visi-misi">
+<div class="visi-misi bg-visi-misi" id="visi-misi">
     <div class="container">
         <div class="row">
             <div class="col-md-5 py-5 pe-6 bg-fafafa">

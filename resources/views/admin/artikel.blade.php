@@ -249,6 +249,13 @@
                                                                     </select>
                                                                 </div>
                                                                 <div class="form-group">
+                                                                    <label>Tanggal</label>
+                                                                    <input
+                                                                        value="{{ $item->created_at->format('Y-m-d') }}"
+                                                                        required type="date" name="created_at"
+                                                                        class="form-control" placeholder="">
+                                                                </div>
+                                                                <div class="form-group">
                                                                     <label>Penulis</label>
                                                                     <input value="{{ $item->penulis }}" required
                                                                         type="text" name="penulis" class="form-control"
@@ -326,6 +333,10 @@
                                 <option value="{{ $k->id }}">{{ $k->nama }}</option>
                                 @endforeach
                             </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Tanggal</label>
+                            <input value="" required type="date" name="created_at" class="form-control" placeholder="">
                         </div>
                         <div class="form-group">
                             <label>Penulis</label>

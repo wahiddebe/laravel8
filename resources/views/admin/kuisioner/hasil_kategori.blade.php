@@ -50,7 +50,7 @@
                                             <th>Kategori</th>
                                             <th>Jawaban</th>
                                             <th>Nilai Min</th>
-                                            <th>Nilai Min</th>
+                                            <th>Nilai Max</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
