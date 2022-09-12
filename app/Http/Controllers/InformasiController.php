@@ -18,7 +18,7 @@ class InformasiController extends Controller
     {
         $data = Informasi::find($id);
         if ($id == 1) {
-            $subtitle = 'Autisme';
+            $subtitle = 'Autisma';
         } else {
             $subtitle = 'Disabilitas';
         }

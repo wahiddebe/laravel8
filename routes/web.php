@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\{BeritaController, WelcomeController, HomeController, InformasiController, KuisionerController, TentangController, ShopController, ArtikelController};
+use App\Http\Controllers\{BeritaController, WelcomeController, HomeController, InformasiController, KuisionerController, TentangController, ShopController, ArtikelController, ExportController};
 use App\Http\Controllers\Admin\{DashboardController, HomeController as AdminHomeController, TentangController as AdminTentangController, KategoriController as AdminKategoriController, BeritaController as AdminBeritaController, InformasiController as AdminInformasiController, KuisionerController as AdminKuisionerController, ArtikelController as AdminArtikelController, ShopController as AdminShopController, SettingController as AdminSettingController};
 use Illuminate\Support\Facades\Route;
 
@@ -125,3 +125,5 @@ Route::put('/admin/informasi/update', [AdminInformasiController::class, 'update'
 Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
     \UniSharp\LaravelFilemanager\Lfm::routes();
 });
+
+Route::get('admin/kuisioner/hasil/export/kuisioner/{id}', [ExportController::class, 'export_kuisioner'])->name('export.kuisioner');

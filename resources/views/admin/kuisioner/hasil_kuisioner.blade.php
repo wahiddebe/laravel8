@@ -73,7 +73,8 @@
                                                     <button type="button" href="#" data-toggle="modal"
                                                         data-target="#delete{{ $item->id }}"
                                                         class="btn btn-danger">Delete</button>
-                                                    <a href="" type="button" class="btn btn-success">Download</a>
+                                                    <a href="export/kuisioner/{{ $item->id }}" type="button"
+                                                        class="btn btn-success">Download</a>
                                                 </div>
                                             </td>
                                         </tr>

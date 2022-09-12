@@ -14,8 +14,8 @@ use Illuminate\Support\Facades\Storage;
             <table id="myTable" class="table text-start table-bordered" width="100%">
                 <thead>
                     <tr>
-                        <th>Pertanyaan</th>
-                        <th>Nilai</th>
+                        <th width="50%">Pertanyaan</th>
+                        <th width="50%">Nilai</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -26,7 +26,7 @@ use Illuminate\Support\Facades\Storage;
                         <td>{{ $item->pertanyaan }}</td>
                         <td>
                             @if (Storage::exists($item->nilai))
-                            <img src="{{ asset('storage/'.$item->nilai) }}" class="img-fluid w-100" alt="">
+                            <img src="{{ asset('storage/'.$item->nilai) }}" class="img-fluid" width="250" alt="">
                             @else
                             {{ $item->nilai }}
                             @endif
@@ -49,24 +49,23 @@ use Illuminate\Support\Facades\Storage;
         </div>
     </div>
 
-    @if ($kategori->id == 2)
-    <div class="text-center mt-3">
-        <button class="btn btn-primary text-center" id="download-canvas">Simpan Hasil</button>
+    <div class="text-center py-3">
+
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button class="btn btn-primary text-center" id="download-img-canvas">Simpan Hasil (Gambar)</button>
+            <button class="btn btn-danger text-center" id="download-pdf-canvas">Simpan Hasil (Pdf)</button>
+        </div>
     </div>
-    @else
-    <div class="text-center mt-3">
-        <button class="btn btn-primary text-center" id="download-canvas">Simpan Hasil</button>
-    </div>
-    @endif
+
 
 
 </div>
 
 @push('scripts')
 <script src="https://html2canvas.hertzen.com/dist/html2canvas.js" type="text/javascript"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.debug.js"></script>
 <script>
-    document.getElementById('download-canvas').onclick = function(){
+    document.getElementById('download-img-canvas').onclick = function(){
             const screenshotTarget = document.getElementById('canvas');
             html2canvas(screenshotTarget).then((canvas)=>{
                 const base64image = canvas.toDataURL('image/png');
@@ -78,8 +77,26 @@ use Illuminate\Support\Facades\Storage;
             })
 
         }
+        document.getElementById('download-pdf-canvas').onclick = function(){
+var divContents = $("#canvas").html();
+            var printWindow = window.open('', '', 'height=400,width=800');
+            printWindow.document.write('<html><head><title>Kuisioner</title>');
+            printWindow.document.write('</head><body>');
+            printWindow.document.write(divContents);
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            setTimeout(function() {
+            printWindow.print();
+            printWindow.close();
+            }, 250);
+
+
+
+        }
 
 </script>
+
+
 
 @endpush
 
