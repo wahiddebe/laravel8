@@ -26,7 +26,7 @@
                         <div class="inner">
                             <h3>{{ $data['berita'] }}</h3>
 
-                            <p>Berita</p>
+                            <p>Berita & Artikel</p>
                         </div>
                         <div class="icon">
                             <i class="ion ion-android-list"></i>
@@ -42,7 +42,7 @@
                         <div class="inner">
                             <h3>{{ $data['artikel'] }}</sup></h3>
 
-                            <p>Artikel</p>
+                            <p>Perkumpulan Pemuda/i Autisma Yogasmara</p>
                         </div>
                         <div class="icon">
                             <i class="ion ion-android-list"></i>

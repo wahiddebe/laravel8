@@ -7,7 +7,7 @@
         use Illuminate\Support\Facades\Crypt;
         $id = Crypt::encryptString($data->id);
         @endphp
-        <p class="mt-4 mb-3 fw-semibold text-bn300"> Berita <span class="text-primary">/</span><span><a
+        <p class="mt-4 mb-3 fw-semibold text-bn300"> Berita & Artikel <span class="text-primary">/</span><span><a
                     class="text-decoration-none" href="/berita/{{ $id }}/{{ $data->slug }}">{{ $data->title
                     }}</a></span>
         </p>
@@ -37,7 +37,7 @@
     <div class="mb-5 divider-modal"></div>
     <section class="mt-5 mb-5 pb-5">
         <h1 class="fw-semibold display-5 text-center mb-5">
-            Berita Lainnya
+            Berita & Artikel Lainnya
         </h1>
         <div class="row g-4 mt-3">
             @php
@@ -47,6 +47,7 @@
             @php
             $id = Crypt::encryptString($item->id);
             @endphp
+            @if ($item->status != 0)
             <div class="col-lg-4">
                 <div class="artikel-heading mb-3"
                     style="background-image: url('{{ asset('storage/'.$item->gambar) }}');">
@@ -70,7 +71,7 @@
                     </a>
                 </div>
             </div>
-
+            @endif
             @if ($no == 3)
             @php
             break;

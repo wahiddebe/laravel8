@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kategori;
 use App\Models\Setting;
 use App\Models\Tentang;
 use App\Models\Tentang_layanan;
@@ -24,7 +25,8 @@ class TentangController extends Controller
         //
         $data = Tentang::all()->first();
         $data1 = Tentang_layanan::all();
-        return view('tentang_kami', ['title' => 'Tentang Kami', 'data' => $data, 'data1' => $data1]);
+        $kategori = Kategori::all();
+        return view('tentang_kami', ['title' => 'Tentang Kami', 'data' => $data, 'data1' => $data1, 'kategori' => $kategori]);
     }
 
     /**

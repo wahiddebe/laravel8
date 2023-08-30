@@ -31,13 +31,13 @@
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title">
-                                Artikel
+                                Perkumpulan Pemuda/i Autisma Yogasmara
                             </h3>
                             <div class="card-tools">
                                 <ul class="nav nav-pills ml-auto">
                                     <li class="nav-item">
                                         <a class="nav-link active" href="#revenue-chart" data-toggle="modal"
-                                            data-target="#add">Tambah Artikel</a>
+                                            data-target="#add">Tambah Perkumpulan Pemuda/i Autisma Yogasmara</a>
                                     </li>
                                 </ul>
                             </div>
@@ -101,7 +101,7 @@
                                                 <div class="modal-content">
                                                     <div class="modal-header">
                                                         <h5 class="modal-title" id="view{{ $item->id }}Label">
-                                                            View Artikel
+                                                            View
                                                         </h5>
                                                         <button type="button" class="close" data-dismiss="modal"
                                                             aria-label="Close">
@@ -145,7 +145,7 @@
                                                 <div class="modal-content">
                                                     <div class="modal-header">
                                                         <h5 class="modal-title" id="delete{{ $item->id }}Label">
-                                                            Hapus Berita
+                                                            Hapus Perkumpulan Pemuda/i Autisma Yogasmara
                                                         </h5>
                                                         <button type="button" class="close" data-dismiss="modal"
                                                             aria-label="Close">
@@ -158,7 +158,8 @@
                                                             @csrf
                                                             <div class="card-body">
                                                                 <div class="form-group">
-                                                                    <label>Apakah anda ingin menghapus artikel
+                                                                    <label>Apakah anda ingin menghapus Perkumpulan
+                                                                        Pemuda/i Autisma Yogasmara
                                                                         ini?</label>
                                                                     <input type="text" name="id" value="{{ $item->id }}"
                                                                         hidden>
@@ -182,7 +183,7 @@
                                                 <div class="modal-content">
                                                     <div class="modal-header">
                                                         <h5 class="modal-title" id="edit{{ $item->id }}Label">
-                                                            Edit Artikel
+                                                            Edit Perkumpulan Pemuda/i Autisma Yogasmara
                                                         </h5>
                                                         <button type="button" class="close" data-dismiss="modal"
                                                             aria-label="Close">
@@ -293,7 +294,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="addLabel">
-                    Tambah Artikel
+                    Tambah Perkumpulan Pemuda/i Autisma Yogasmara
                 </h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>

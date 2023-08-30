@@ -20,7 +20,7 @@ class InformasiController extends Controller
         if ($id == 1) {
             $subtitle = 'Autisma';
         } else {
-            $subtitle = 'Disabilitas';
+            $subtitle = 'Ragam Disabilitas';
         }
         return view('informasi', ['title' => 'Informasi', 'data' => $data, 'subtitle' => $subtitle]);
     }

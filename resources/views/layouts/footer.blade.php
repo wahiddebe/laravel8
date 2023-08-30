@@ -22,11 +22,11 @@
             <div class="nav col-lg-8 d-flex justify-content-lg-end justify-content-center p-0">
                 <ul class="nav ">
                     <li class="nav-item">
-                        <a class="nav-link logo" target="_blank" href="{{ " https://instagram.com/".$setting->instagram
-                            }}"><img src="/images/iconoir_youtube.svg" width="32" height="32" alt=""></a>
+                        <a class="nav-link logo" target="_blank" href="{{ $setting->youtube }}" ><img src="/images/iconoir_youtube.svg" width="32" height="32" alt=""></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link logo" target="_blank" href="{{ $setting->youtube }}"><img
+                        <a class="nav-link logo" target="_blank" href="{{ $setting->instagram
+                            }}" ><img
                                 src="/images/akar-icons_instagram-fill.svg" width="32" height="32" alt=""></a>
                     </li>
                 </ul>

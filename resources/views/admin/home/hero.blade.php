@@ -45,9 +45,9 @@
                         <div class="card-body">
                             <div class="tab-content p-0">
                                 <p class="text-primary">Judul Hero</p>
-                                <h1 class="mb-5">{{ $data->judul }}</h1>
+                                <div class="mb-5">{!! $data->judul !!}</div>
                                 <p class="text-primary">Deskripsi Hero</p>
-                                <h4 class="mb-5">{{ $data->sub_judul }}</h4>
+                                <div class="mb-5">{!! $data->sub_judul !!}</div>
                                 <p class="text-primary">Tahun Pengalaman</p>
                                 <h6 class="mb-5">{{ $data->tahun }}</h6>
                                 <p class="text-primary">Gambar Hero</p>
@@ -79,19 +79,24 @@
                     <div class="card-body">
                         <div class="form-group">
                             <label>Judul Hero</label>
-                            <input value="{{ $data->judul }}" required type="text" name="judul" class="form-control"
-                                placeholder="Judul">
+                            {{-- <input value="{{ $data->judul }}" required type="text" name="judul"
+                                class="form-control" placeholder="Judul"> --}}
+                            <textarea name="judul" required class="my-editor form-control" id="my-editor" cols="30"
+                                rows="1">
+                                                                {!! $data->judul !!}</textarea>
                         </div>
                         <div class="form-group">
                             <label>Deskripsi Hero</label>
-                            <input required value="{{ $data->sub_judul }}" type="text" name="sub_judul"
-                                class="form-control" placeholder="Deskripsi">
+                            <textarea name="sub_judul" required class="my-editor2 form-control" id="my-editor2"
+                                cols="30" rows="10">
+                                {!! $data->sub_judul !!}</textarea>
                         </div>
                         <div class="form-group">
                             <label>Tahun Pengalaman</label>
                             <input required type="number" value="{{ $data->tahun }}" name="tahun" class="form-control"
                                 placeholder="Tahun Pengalaman">
                         </div>
+
                         <div class="form-group">
                             <label for="exampleInputFile">Gambar Hero</label>
                             <div class="input-group">
@@ -134,6 +139,29 @@
                 imagePreview.src = oFREvent.target.result;
             };
             }
+</script>
+<script src="https://cdn.ckeditor.com/4.6.2/full/ckeditor.js"></script>
+<script>
+    $('#edithero').modal({
+focus: false,
+show:false
+})
+
+$.fn.modal.Constructor.prototype.enforceFocus = function () {};
+</script>
+<script>
+    var options = {
+    filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
+    filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=',
+    filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
+    filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token=',
+
+  };
+
+</script>
+<script>
+    CKEDITOR.replace('my-editor2', options);
+    CKEDITOR.replace('my-editor', options);
 </script>
 @endpush
 @endonce

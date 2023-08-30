@@ -23,7 +23,7 @@ class ArtikelController extends Controller
         //
         $data = Artikel::with('kategori')->where('status', 1)->get();
         $kategori = Kategori::all();
-        return view('admin.artikel', ['data' => $data, 'title' => 'Artikel', 'kategori' => $kategori]);
+        return view('admin.artikel', ['data' => $data, 'title' => 'Perkumpulan Pemuda/i Autisma Yogasmara', 'kategori' => $kategori]);
     }
 
     /**

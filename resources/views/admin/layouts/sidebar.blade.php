@@ -118,13 +118,13 @@
                             <li class="nav-item">
                                 <a href="{{ route('admin.berita') }}" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Berita</p>
+                                    <p>Berita & Artikel</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{ route('admin.artikel') }}" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Artikel</p>
+                                    <p>Perkumpulan Pemuda/i Autisma Yogasmara</p>
                                 </a>
                             </li>
                         </ul>

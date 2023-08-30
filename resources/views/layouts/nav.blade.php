@@ -19,21 +19,21 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="{{ '/informasi/1' }}">Autisma</a></li>
-                        <li><a class="dropdown-item" href="{{ '/informasi/2' }}">Disabilitas</a></li>
+                        <li><a class="dropdown-item" href="{{ '/informasi/2' }}">Ragam Disabilitas</a></li>
                     </ul>
                 </li>
 
                 <li class="nav-item">
                     <a class="nav-link {{ $title =='Kuisioner' ? 'active' : "" }}" aria-current="page"
-                        href="{{ route('kuisioner') }}">Kuisioner</a>
+                        href="{{ route('kuisioner') }}">Kuisioner Autisma</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ $title =='Berita' ? 'active' : "" }}" aria-current="page"
-                        href="{{ route('berita') }}">Berita</a>
+                        href="{{ route('berita') }}">Berita & Artikel</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ $title =='Artikel' ? 'active' : "" }}" aria-current="page"
-                        href="{{ route('artikel') }}">Artikel</a>
+                        href="{{ route('artikel') }}">Perkumpulan Pemuda/i Autisma Yogasmara</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ $title =='Yogasmarashop' ? 'active' : "" }}" aria-current="page"
@@ -46,8 +46,7 @@
                             src="{{ asset('/images/iconoir_youtube.svg') }}" width="32" height="32" alt=""></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link logo" target="_blank"
-                        href="{{ 'https://instagram.com/'.$setting->instagram }}"><img
+                    <a class="nav-link logo" target="_blank" href="{{ $setting->instagram }}"><img
                             src="{{ asset('/images/akar-icons_instagram-fill.svg') }}" width="32" height="32"
                             alt=""></a>
                 </li>

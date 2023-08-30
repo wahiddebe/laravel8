@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="hero-small bg-primary100 text-center p-6 mb-5">
-        <h1 class="display-2 fw-semibold py-1">Berita Yogasmara</h1>
+        <h1 class="display-2 fw-semibold py-1">Berita & Artikel Yogasmara</h1>
     </div>
     <div class="row mt-3 g-3">
         <div class="col-lg-1 col-4 col-md-2">

@@ -4,12 +4,12 @@
 <div class="hero-section min-vh-100 bg-primary100">
     <div class="container">
         <div class="hero-text text-center mb-5">
-            <h1 class="display-3 fw-semibold text-bn500 px-5">
-                {{ $hero->judul }}
-            </h1>
-            <p class="fs-4 text-bn400 px-5">
-                {{$hero->sub_judul}}
-            </p>
+            <div class=" fw-semibold text-bn500 px-5">
+                {!! $hero->judul !!}
+            </div>
+            <div class="text-bn400 px-5">
+                {!! $hero->sub_judul!!}
+            </div>
             <div class="d-grid gap-2 d-md-flex justify-content-md-center">
                 <a href="#lingkup-section" type="button" class="btn btn-primary px-5 btn-lg py-3 rounded-0">Pelajari
                     Lebih Lanjut</a>

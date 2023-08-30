@@ -91,15 +91,18 @@
     <div class="container py-5">
         <h1 class="display-5 fw-semibold lh-2 mb-5 text-center">Nilai Utama Kami</h1>
         <div class="row mt-3 g-4">
+            @foreach ($kategori as $kat)
             <div class="col-lg-3 col-md-6 text-center">
                 <div class="bg-fafafa p-4">
                     <div class="p-3">
-                        <img src="/images/Kepedulian 1.png" style="max-height: 135px;" class="img-fluid " alt="">
-                        <p class="fs-4 mb-0 mt-3">Kepedulian</p>
+                        <img src="{{ asset('storage/'.$kat->gambar) }}" style="max-height: 135px;" class="img-fluid "
+                            alt="">
+                        <p class="fs-4 mb-0 mt-3">{{ $kat->nama }}</p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 text-center">
+            @endforeach
+            {{-- <div class="col-lg-3 col-md-6 text-center">
                 <div class="bg-fafafa p-4">
                     <div class="p-3">
                         <img src="/images/penerimaan 1.png" style="max-height: 135px;" class="img-fluid " alt="">
@@ -122,7 +125,7 @@
                         <p class="fs-4 mb-0 mt-3">Apresiasi</p>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 </div>

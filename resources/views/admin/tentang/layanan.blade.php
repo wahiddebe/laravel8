@@ -86,6 +86,7 @@
                                                 <div class="btn-group" role="group" aria-label="Basic example">
                                                     <button type="button" href="#" data-toggle="modal"
                                                         data-target="#editpoint{{ $item->id }}"
+                                                        onclick="ckbuild({{ $item->id }})"
                                                         class="btn btn-warning">Edit</button>
                                                     <button type="button" href="#" data-toggle="modal"
                                                         data-target="#deletepoint{{ $item->id }}"
@@ -123,11 +124,12 @@
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <label>Deskripsi Point</label>
-                                                                    <textarea name="desc" onkeyup='writeText(this)'
-                                                                        required class="form-control"
-                                                                        placeholder="Deskripsi Point" id="" cols="30"
-                                                                        rows="10">{!! $item->desc !!}</textarea>
-
+                                                                    <textarea name="desc" required
+                                                                        class="my-editoredit{{ $item->id }} form-control"
+                                                                        id="my-editoredit{{ $item->id }}" cols="30"
+                                                                        rows="10">
+                                                                        {!! $item->desc !!}
+                                                                    </textarea>
                                                                 </div>
                                                             </div>
 
@@ -262,8 +264,9 @@
                         </div>
                         <div class="form-group">
                             <label>Deskripsi Point</label>
-                            <textarea name="desc" onkeyup='writeText(this)' required class="form-control"
-                                placeholder="Deskripsi Point" id="" cols="30" rows="10"></textarea>
+                            <textarea name="desc" required class="my-editor2 form-control" id="my-editor2" cols="30"
+                                rows="10">
+                            </textarea>
 
                         </div>
                     </div>
@@ -294,17 +297,39 @@
             }
 </script>
 <script>
-    let t = '';
-
-    let writeText = (ele) => {
-    t = ele.value;
-    ele.value = t.replace(/\n\r?/g, '<br />');
-    }
-</script>
-<script>
     $(document).ready( function () {
     $('#myTable').DataTable();
     } );
+</script>
+<script src="https://cdn.ckeditor.com/4.6.2/full/ckeditor.js"></script>
+<script>
+    $('#addpoint').modal({
+focus: false,
+show:false
+})
+
+$.fn.modal.Constructor.prototype.enforceFocus = function () {};
+</script>
+<script>
+    var options = {
+    filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
+    filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=',
+    filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
+    filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token=',
+
+  };
+
+</script>
+<script>
+    function ckbuild(params) {
+    console.log(params);
+    CKEDITOR.replace('my-editoredit'+params, options);
+    $('#editpoint'+params).modal({
+    focus: false,
+    show:false
+    })
+    }
+    CKEDITOR.replace('my-editor2', options);
 </script>
 @endpush
 @endonce

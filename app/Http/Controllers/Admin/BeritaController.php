@@ -24,7 +24,7 @@ class BeritaController extends Controller
         //
         $data = Berita::with('kategori')->where('status', 1)->get();
         $kategori = Kategori::all();
-        return view('admin.berita', ['data' => $data, 'title' => 'Berita', 'kategori' => $kategori]);
+        return view('admin.berita', ['data' => $data, 'title' => 'Berita & Title', 'kategori' => $kategori]);
     }
 
     /**

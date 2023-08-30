@@ -31,13 +31,13 @@
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title">
-                                Berita
+                                Berita & Artikel
                             </h3>
                             <div class="card-tools">
                                 <ul class="nav nav-pills ml-auto">
                                     <li class="nav-item">
                                         <a class="nav-link active" href="#revenue-chart" data-toggle="modal"
-                                            data-target="#add">Tambah Berita</a>
+                                            data-target="#add">Tambah Berita & Artikel</a>
                                     </li>
                                 </ul>
                             </div>
@@ -101,7 +101,7 @@
                                                 <div class="modal-content">
                                                     <div class="modal-header">
                                                         <h5 class="modal-title" id="view{{ $item->id }}Label">
-                                                            View Berita
+                                                            View
                                                         </h5>
                                                         <button type="button" class="close" data-dismiss="modal"
                                                             aria-label="Close">
@@ -145,7 +145,7 @@
                                                 <div class="modal-content">
                                                     <div class="modal-header">
                                                         <h5 class="modal-title" id="delete{{ $item->id }}Label">
-                                                            Hapus Berita
+                                                            Hapus Berita & Artikel
                                                         </h5>
                                                         <button type="button" class="close" data-dismiss="modal"
                                                             aria-label="Close">
@@ -158,7 +158,7 @@
                                                             @csrf
                                                             <div class="card-body">
                                                                 <div class="form-group">
-                                                                    <label>Apakah anda ingin menghapus berita
+                                                                    <label>Apakah anda ingin menghapus Berita & Artikel
                                                                         ini?</label>
                                                                     <input type="text" name="id" value="{{ $item->id }}"
                                                                         hidden>
@@ -182,7 +182,7 @@
                                                 <div class="modal-content">
                                                     <div class="modal-header">
                                                         <h5 class="modal-title" id="edit{{ $item->id }}Label">
-                                                            Edit Berita
+                                                            Edit Berita & Artikel
                                                         </h5>
                                                         <button type="button" class="close" data-dismiss="modal"
                                                             aria-label="Close">
@@ -293,7 +293,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="addLabel">
-                    Tambah Berita
+                    Tambah Berita & Artikel
                 </h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
